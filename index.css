@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(0, 0, 54);
+    color: whitesmoke;
+}
+
+section {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+section:nth-child(even) {
+    background-color: rgb(0, 0, 33);
+}
+
+.gridCol {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* border: 2px solid red; */
+    width: 90%;
+    gap: 10px;
+}
+
+.grids {
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(45deg, rgb(0, 0, 82), rgb(96, 127, 133));
+}

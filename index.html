@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate On Scroll Vanilla</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- <section class="sections">
+        <h1>Section 1</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, nisi!</p>
+    </section>
+    <section class="sections">
+        <h1>Section 1</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, nisi!</p>
+    </section> -->
+
+    <section>
+        <div class="gridCol">
+            <div class="grids">
+                <h2 class="counterClass" data-number="2000">
+                    0+
+                </h2>
+                <p>Lorem ipsum</p>
+            </div>
+            <div class="grids">
+                <h2 class="counterClass" data-number="4000">
+                    0+
+                </h2>
+                <p>Lorem ipsum</p>
+            </div>
+            <div class="grids">
+                <h2 class="counterClass" data-number="3000">
+                    0+
+                </h2>
+                <p>Lorem ipsum</p>
+            </div>
+            <div class="grids">
+                <h2 class="counterClass" data-number="6000">
+                    0+
+                </h2>
+                <p>Lorem ipsum</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="sections">
+        <h1>Section 1</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, nisi!</p>
+    </section>
+    <section class="sections">
+        <h1>Section 1</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, nisi!</p>
+    </section>
+    <section class="sections">
+        <h1>Section 1</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, nisi!</p>
+    </section>
+
+
+    <script>
+
+
+
+        const counterNum = document.querySelectorAll('.counterClass');
+
+
+        const speed = 200;
+        // console.log(counterNum.dataset.number);
+
+        counterNum.forEach((curElem) => {
+            // console.log(counterNum.dataset.number)
+            const updateNumber = () => {
+                // console.log("Hello")
+                const InitialNumber = parseInt(curElem.innerText);
+                // console.log(InitialNumber);
+
+                const targetNumber = parseInt(curElem.dataset.number);
+                // console.log(targetNumber);
+
+                const incrementNum = Math.trunc(targetNumber / speed);
+                // console.log(incrementNum);
+
+                if (InitialNumber < targetNumber) {
+                    curElem.innerText = `${InitialNumber + incrementNum}+`;
+                }
+
+
+                setInterval(() => {
+                    updateNumber();
+                }, 10);
+            };
+            updateNumber();
+        });
+    </script>
+
+</body>
+
+</html>
